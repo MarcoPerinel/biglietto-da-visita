@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes">
+    <script src="https://kit.fontawesome.com/b2f596d9b8.js" crossorigin="anonymous"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             
@@ -16,12 +17,23 @@
                 const body = document.body;
                 var themeLabel = document.getElementById('themeLabel');
 
+                themeLabel.addEventListener('click', function(){
+                    if (body.classList.contains('night')) {
+                        body.classList.remove('night');
+                        themeLabel.innerHTML = '<i class="fa-regular fa-moon"></i> Switch to night theme';
+                    } else {
+                        body.classList.add('night');
+                        themeLabel.innerHTML = '<i class="fa-regular fa-sun"></i> Switch to day theme';
+                    }
+                });
+
+
                 if (now >= 6 && now <= 19) {
                     body.classList.remove('night');
-                    themeLabel.textContent = 'Using light Theme';
+                    themeLabel.innerHTML = '<i class="fa-regular fa-moon"></i> Switch to night theme';
                 } else {
                     body.classList.add('night');
-                    themeLabel.textContent = 'Using dark Theme';
+                    themeLabel.innerHTML = '<i class="fa-regular fa-sun"></i> Switch to day theme';
                 }
             }
             changeTheme();
@@ -163,6 +175,19 @@ p.credits {
     right: 20px;
 }
 
+span#themeLabel {
+    display: flex;
+    flex-direction: row;
+}
+
+i.fa-regular.fa-moon {
+    font-size: 12px !important;
+    width: 20px;
+    height: 20px;
+    z-index: 100;
+    color: black;
+}
+
 @media (max-width: 768px) {
     body {
         height: 100vh;
@@ -201,6 +226,20 @@ p.credits {
         padding: 5px 15px;
         z-index: 10;
         border-radius: 20px 0px 0px 20px;
+    }
+    .current-theme span {
+        color: white;
+    }
+    span#themeLabel {
+        display: flex;
+        flex-direction: row;
+    }
+    i.fa-regular.fa-moon {
+        font-size: 12px !important;
+        width: 20px;
+        height: 20px;
+        z-index: 100;
+        color: white;
     }
 }
 

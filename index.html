@@ -30,10 +30,10 @@
 
                 if (now >= 6 && now <= 19) {
                     body.classList.remove('night');
-                    themeLabel.innerHTML = '<i class="fa-regular fa-moon"></i> Switch to night theme';
+                    themeLabel.innerHTML = '<i class="fa-regular fa-moon" style="color: black;"></i> Switch to night theme';
                 } else {
                     body.classList.add('night');
-                    themeLabel.innerHTML = '<i class="fa-regular fa-sun"></i> Switch to day theme';
+                    themeLabel.innerHTML = '<i class="fa-regular fa-sun" style="color: white;"></i> Switch to day theme';
                 }
             }
             changeTheme();

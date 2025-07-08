@@ -92,6 +92,7 @@ h1,h2,h3,h4,h5,h6,p,span,a {
 *   daylight
 */
 body {
+    max-width: 1920px;
     height: 100vh;
     display: flex;
     align-content: center;
@@ -138,7 +139,7 @@ img.immagine-profilo {
 }
 
 .container-block {
-    max-width: 600px;
+    max-width: 60%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -148,7 +149,7 @@ img.immagine-profilo {
     border-style: dashed;
     border-width: 1px;
     box-sizing: content-box;
-    padding: 40px;
+    padding: 30px;
 }
 
 .container-contacts {
@@ -200,9 +201,11 @@ span#themeLabel i {
         align-items: center;
         background-color: #fdfdfd;
         overflow: scroll;
+        max-width: 98%;
     }
     .container-block {
         padding: 35px 20px;
+        max-width: 100%;
     }
     img.immagine-profilo {
         width: 90px;
